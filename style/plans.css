@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+
+body {
+    font-family: "Open Sans" , sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-alt-color);
+}
+
+
+/* End Plans Page */
+.plans-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(450px , 1fr));
+    gap: 20px;
+}
+
+.plan ul li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.plan ul li .yes {
+    color: #22c55e;    
+}
+
+.plan ul li i:not(.yes , .help) {
+    color:#f44336;
+}
+
+.plan ul li i:last-child {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--grey-color);
+}
+
+.plan-header {
+    background-color: #22c55e;
+    padding: 5px;
+    color: white;
+}
+
+.plan-header > div {
+    border: 3px solid white;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan-header > div > h3 {
+    font-size: 22px;
+} 
+
+.plan-header > div > h2 {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.plan-header > div > h2 span {
+    font-weight: normal;
+    position: absolute;
+    left: -17px;
+    top: -5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.free .plan-header , 
+.free a {
+    background-color: #22c55e;
+}
+
+.basic .plan-header , 
+.basic a  {
+    background-color: #0075ff;
+}
+
+.premium .plan-header {
+    background-color: #f59e0b;
+}
+
+@media (max-width:767px) {
+    .plans-page {
+        grid-template-columns: minmax(200px , 1fr);
+        margin: 0 10px;
+        gap: 10px;
+    }
+    .plans-page .plan ul li i:last-child {
+        display: block;
+    }
+}
+/* End Plans Page */

@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-alt-color);
+}
+
+.files-page {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+/* Start File Stats */
+.files-page .files-stats {
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.files-page .files-stats .icon {
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    display: flex;
+}
+
+.files-page .files-stats .blue {
+    background-color: rgba(0, 119, 255, 0.253);
+}
+
+.files-page .files-stats .green {
+    background-color: rgba(34, 197, 94, 0.26);
+}
+.files-page .files-stats .red {
+    background-color: rgba(244, 67, 54, 0.438);
+}
+.files-page .files-stats .orange {
+    background-color: rgba(255, 166, 0, 0.411);
+}
+
+.files-page .files-stats .size {
+    margin: 0 0 0 auto;
+}
+
+.files-page .files-stats .upload {
+    margin: 10px auto;
+    background-color: var(--blue-color);
+    transition: .3s;
+    color: white;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+
+.files-page .files-stats .upload:hover {
+    background-color: var(--blue-alt-color);
+}
+
+.files-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(200px , 1fr));
+    gap: 20px;
+    flex: 1;
+}
+
+.files-content .file .icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}   
+
+.files-content .file .icon img {
+    max-width: 60px;
+    transition: .3s;
+}
+
+.files-content .file .icon img:hover {
+    transform: rotate(5deg);
+}
+
+.files-content .file .icon span {
+    font-size: 13px;
+    font-weight:600;
+}
+
+.files-content .file .content {
+    border-top: 1px solid #eee;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.files-content .file .content span{
+    font-size: 15px;
+}
+
+@media (max-width:767px) {
+    .files-content {
+        grid-template-columns: repeat(auto-fill , 280px);
+        margin: 0 10px;
+        gap: 10px;
+    }
+    .files-page {
+        flex-direction: column;
+        align-items: normal;
+    }
+}
+
+
+/* End Files Page */
