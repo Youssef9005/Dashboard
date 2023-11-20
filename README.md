@@ -1,6 +1,6 @@
 <div align="center">
   <h2 align="center">Dashboard</h2>
-  <a href="https://youssef9005.github.io/Kasber-Website/"><strong>➥ Live Demo</strong></a>
+  <a href="https://youssef9005.github.io/Dashboard/"><strong>➥ Live Demo</strong></a>
 </div>
 
 <h2>Website Preview</h2>
